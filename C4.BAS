@@ -8,8 +8,8 @@ FOR j% = 1 TO 7
   column(j%) = 417
 NEXT
 CLS
-FOR j% = 92 TO 470 STEP 65
-  FOR i% = 120 TO 547 STEP 65
+FOR j% = 92 TO 417 STEP 65
+  FOR i% = 120 TO 510 STEP 65
     CIRCLE (i%, j%), 28, 13
   NEXT
 NEXT

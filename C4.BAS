@@ -9,12 +9,12 @@ FOR j% = 1 TO 7
 NEXT
 CLS
 FOR j% = 92 TO 417 STEP 65
-  FOR i% = 120 TO 510 STEP 65
+  FOR i% = 125 TO 515 STEP 65
     CIRCLE (i%, j%), 28, 13
   NEXT
 NEXT
 Showmoves: COLOR colorfor(player%)
-LOCATE 2, 15
+LOCATE 2, 16
 PRINT "(1)     (2)     (3)     (4)     (5)     (6)     (7)", "Moves= "; moves$
 Getinput: LOCATE 1, 1
 INPUT j%

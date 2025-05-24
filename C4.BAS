@@ -9,19 +9,19 @@ FOR j% = 1 TO 7
 NEXT
 CLS
 FOR j% = 95 TO 420 STEP 65
-  FOR i% = 125 TO 515 STEP 65
+  FOR i% = 190 TO 580 STEP 65
     CIRCLE (i%, j%), 28, 13
   NEXT
 NEXT
 Showmoves: COLOR colorfor(player%)
-LOCATE 2, 16
+LOCATE 2, 24
 PRINT "(1)     (2)     (3)     (4)     (5)     (6)     (7)", "Moves= "; moves$
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
   CASE IS >= 100: GOTO Newgame
   CASE 1 TO 7: IF column(j%) < 31 THEN GOTO Getinput
-               PAINT (j% * 65 + 60, column(j%)), , 13
+               PAINT (j% * 65 + 125, column(j%)), , 13
                column(j%) = column(j%) - 65
                player% = NOT player%
                moves$ = moves$ + CHR$(j% + 48)

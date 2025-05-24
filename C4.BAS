@@ -19,7 +19,7 @@ PRINT "(1)     (2)     (3)     (4)     (5)     (6)     (7)", "Moves= "; moves$
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
-  CASE IS >= 100: GOTO Newgame
+  CASE IS >= 1000: GOTO Newgame
   CASE 1 TO 7: IF column(j%) < 31 THEN GOTO Getinput
                PAINT (j% * 65 + 125, column(j%)), , 13
                column(j%) = column(j%) - 65

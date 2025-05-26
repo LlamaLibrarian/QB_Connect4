@@ -1,7 +1,7 @@
-DIM column(1 TO 7) AS INTEGER, colorfor(-1 TO 0) AS INTEGER
+DIM column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTEGER
 colorfor(-1) = 4
-colorfor(0) = 7
-player% = 0
+colorfor(1) = 7
+player% = 1
 SCREEN 12
 Newgame: moves$ = ""
 FOR j% = 1 TO 7
@@ -23,7 +23,7 @@ SELECT CASE j%
   CASE 1 TO 7: IF column(j%) < 31 THEN GOTO Getinput
                PAINT (j% * 65 + 125, column(j%)), , 13
                column(j%) = column(j%) - 65
-               player% = NOT player%
+               player% = -player%
                moves$ = moves$ + CHR$(j% + 48)
                GOTO Showmoves
   CASE IS < 0: END

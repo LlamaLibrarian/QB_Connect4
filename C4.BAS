@@ -13,8 +13,8 @@ FOR j% = 95 TO 420 STEP 65
     CIRCLE (i%, j%), 28, 13
   NEXT
 NEXT
-Showmoves: IF disccolor% = 7 THEN disccolor% = 4 ELSE disccolor% = 7
-COLOR disccolor%
+Showmoves: IF nextdisc% = 7 THEN nextdisc% = 4 ELSE nextdisc% = 7
+COLOR nextdisc%
 LOCATE 2, 24
 PRINT "(1)     (2)     (3)     (4)     (5)     (6)     (7)", "Moves= "; moves$
 Getinput: LOCATE 1, 1

@@ -1,4 +1,7 @@
-DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER
+DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTEGER
+colorfor(-1) = 4
+colorfor(1) = 7
+player% = 1
 FOR j% = 1 TO 7
   row(j%) = j% * 65 + 125
 NEXT
@@ -13,8 +16,7 @@ FOR j% = 95 TO 420 STEP 65
     CIRCLE (i%, j%), 28, 13
   NEXT
 NEXT
-Showmoves: IF nextdisc% = 7 THEN nextdisc% = 4 ELSE nextdisc% = 7
-COLOR nextdisc%
+Showmoves: COLOR colorfor(player%)
 LOCATE 2, 24
 PRINT "(1)     (2)     (3)     (4)     (5)     (6)     (7)", "Moves= "; moves$
 Getinput: LOCATE 1, 1
@@ -23,6 +25,7 @@ SELECT CASE j%
   CASE IS >= 1000: GOTO Newgame
   CASE 1 TO 7: IF column(j%) < 31 THEN GOTO Getinput
                PAINT (row(j%), column(j%)), , 13
+               player% = -player%
                column(j%) = column(j%) - 65
                moves$ = moves$ + CHR$(j% + 48)
                GOTO Showmoves

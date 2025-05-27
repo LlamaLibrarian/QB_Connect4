@@ -18,7 +18,7 @@ FOR j% = 95 TO 420 STEP 65
 NEXT
 Showmoves: COLOR colorfor(player%)
 LOCATE 2, 24
-PRINT "(1)     (2)     (3)     (4)     (5)     (6)     (7)", "Moves= "; moves$
+PRINT "\1/     \2/     \3/     \4/     \5/     \6/     \7/", "Moves= "; moves$
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%

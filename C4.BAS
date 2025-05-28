@@ -2,23 +2,35 @@ DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTE
 colorfor(-1) = 4
 colorfor(1) = 7
 player% = 1
-FOR j% = 1 TO 7
-  row(j%) = j% * 65 + 125
-NEXT
+  row(1) = 190
+    row(2) = 255
+      row(3) = 320
+        row(4) = 385
+          row(5) = 450
+            row(6) = 515
+              row(7) = 580
 SCREEN 12
 Newgame: moves$ = ""
-FOR j% = 1 TO 7
-  column(j%) = 420
-NEXT
+  column(1) = 420
+    column(2) = 420
+      column(3) = 420
+        column(4) = 420
+          column(5) = 420
+            column(6) = 420
+              column(7) = 420
 CLS
 FOR j% = 95 TO 420 STEP 65
-  FOR i% = 190 TO 580 STEP 65
-    CIRCLE (i%, j%), 28, 13
-  NEXT
+  CIRCLE (190, j%), 28, 13
+    CIRCLE (255, j%), 28, 13
+      CIRCLE (320, j%), 28, 13
+        CIRCLE (385, j%), 28, 13
+          CIRCLE (450, j%), 28, 13
+            CIRCLE (515, j%), 28, 13
+              CIRCLE (580, j%), 28, 13
 NEXT
 Showmoves: COLOR colorfor(player%)
 LOCATE 2, 24
-PRINT "\1/     \2/     \3/     \4/     \5/     \6/     \7/", "Moves= "; moves$
+PRINT ">1<     >2<     >3<     >4<     >5<     >6<     >7<", "Moves= "; moves$
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%

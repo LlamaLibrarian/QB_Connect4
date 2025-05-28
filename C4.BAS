@@ -20,13 +20,9 @@ Newgame: moves$ = ""
               column(7) = 420
 CLS
 FOR j% = 95 TO 420 STEP 65
-  CIRCLE (190, j%), 28, 13
-    CIRCLE (255, j%), 28, 13
-      CIRCLE (320, j%), 28, 13
-        CIRCLE (385, j%), 28, 13
-          CIRCLE (450, j%), 28, 13
-            CIRCLE (515, j%), 28, 13
-              CIRCLE (580, j%), 28, 13
+  FOR i% = 190 TO 580 STEP 65
+    CIRCLE (i%, j%), 28, 13
+  NEXT
 NEXT
 Showmoves: COLOR colorfor(player%)
 LOCATE 2, 24

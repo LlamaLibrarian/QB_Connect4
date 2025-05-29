@@ -32,10 +32,10 @@ INPUT j%
 SELECT CASE j%
   CASE IS >= 1000: GOTO Newgame
   CASE 1 TO 7: IF column(j%) < 31 THEN GOTO Getinput
-               PAINT (row(j%), column(j%)), , 13
                player% = -player%
                column(j%) = column(j%) - 65
                moves$ = moves$ + CHR$(j% + 48)
+               PAINT (row(j%), column(j%)), , 13
                GOTO Showmoves
   CASE IS < 0: END
 END SELECT

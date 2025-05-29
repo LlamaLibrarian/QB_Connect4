@@ -36,4 +36,3 @@ SELECT CASE j%
   CASE IS < 0: END
 END SELECT
 GOTO Getinput
-

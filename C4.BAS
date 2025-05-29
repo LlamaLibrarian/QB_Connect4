@@ -10,7 +10,8 @@ player% = 1
             row(6) = 515
               row(7) = 580
 SCREEN 12
-Newgame: moves$ = ""
+Newgame: CLS
+moves$ = ""
   column(1) = 420
     column(2) = 420
       column(3) = 420
@@ -18,7 +19,6 @@ Newgame: moves$ = ""
           column(5) = 420
             column(6) = 420
               column(7) = 420
-CLS
 FOR j% = 95 TO 420 STEP 65
   FOR i% = 190 TO 580 STEP 65
     CIRCLE (i%, j%), 28, 13

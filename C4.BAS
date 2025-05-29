@@ -10,8 +10,7 @@ player% = 1
             row(6) = 515
               row(7) = 580
 SCREEN 12
-Newgame: CLS
-moves$ = ""
+Newgame: moves$ = ""
   column(1) = 420
     column(2) = 420
       column(3) = 420
@@ -30,7 +29,8 @@ PRINT ">1<     >2<     >3<     >4<     >5<     >6<     >7<", "Moves= "; moves$
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
-  CASE IS >= 1000: GOTO Newgame
+  CASE IS >= 1000: CLS
+                   GOTO Newgame
   CASE 1 TO 7: IF column(j%) < 31 THEN GOTO Getinput
                player% = -player%
                moves$ = moves$ + CHR$(j% + 48)

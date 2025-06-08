@@ -13,7 +13,7 @@ SELECT CASE entry%
   CASE IS >= 1000: CLS
                    GOTO Newgame
   CASE 1 TO 7: i% = entry% * 65 + 125
-               FOR j% = 385 TO 5 STEP -65
+               FOR j% = 385 TO 60 STEP -65
                  IF POINT(i%, j%) = 0 THEN
                    player% = -player%
                    moves$ = moves$ + CHR$(entry% + 48)

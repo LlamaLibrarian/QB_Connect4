@@ -1,5 +1,5 @@
 # QB_Connect4
 
-    This is a Connect4 board program for the QBASIC.
+    This is a board for the connect4 game, runs in QBASIC.
     
     Filename= C4.BAS

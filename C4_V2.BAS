@@ -10,8 +10,6 @@ PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", "Moves= "; moves$;
 Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
-  CASE IS >= 1000: CLS
-                   GOTO Newgame
   CASE 1 TO 7: i% = entry% * 65 + 125
                FOR j% = 385 TO 60 STEP -65
                  IF POINT(i%, j%) = 0 THEN
@@ -22,6 +20,8 @@ SELECT CASE entry%
                    GOTO Showmoves
                  END IF
                NEXT
+  CASE IS >= 1000: CLS
+                   GOTO Newgame
   CASE IS < 0: END
 END SELECT
 GOTO Getinput

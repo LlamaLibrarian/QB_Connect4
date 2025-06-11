@@ -24,8 +24,6 @@ PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", "Moves= "; moves$;
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
-  CASE IS >= 1000: CLS
-                   GOTO Newgame
   CASE 1 TO 7: IF column(j%) < 0 THEN GOTO Getinput
                player% = -player%
                moves$ = moves$ + CHR$(j% + 48)
@@ -33,6 +31,8 @@ SELECT CASE j%
                PAINT (row(j%), column(j%)), , 13
                column(j%) = column(j%) - 65
                GOTO Showmoves
+  CASE IS >= 1000: CLS
+                   GOTO Newgame
   CASE IS < 0: END
 END SELECT
 GOTO Getinput

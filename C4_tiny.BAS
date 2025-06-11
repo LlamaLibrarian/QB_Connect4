@@ -18,8 +18,8 @@ Newgame: moves$ = ""
           column(5) = 385
             column(6) = 385
               column(7) = 385
-Showmoves: COLOR colorfor(player%)
-LOCATE 28, 24
+Showmoves: LOCATE 28, 24
+COLOR colorfor(player%)
 PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", "Moves= "; moves$;
 Getinput: LOCATE 1, 1
 INPUT j%

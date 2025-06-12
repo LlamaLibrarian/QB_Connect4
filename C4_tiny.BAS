@@ -25,8 +25,8 @@ Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
   CASE 1 TO 7: IF column(j%) < 0 THEN GOTO Getinput
-               player% = -player%
                moves$ = moves$ + CHR$(j% + 48)
+               player% = -player%
                CIRCLE (row(j%), column(j%)), 28, 13
                PAINT (row(j%), column(j%)), , 13
                column(j%) = column(j%) - 65

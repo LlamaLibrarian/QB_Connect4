@@ -13,8 +13,8 @@ SELECT CASE entry%
   CASE 1 TO 7: i% = entry% * 65 + 125
                FOR j% = 385 TO 60 STEP -65
                  IF POINT(i%, j%) = 0 THEN
-                   player% = -player%
                    moves$ = moves$ + CHR$(entry% + 48)
+                   player% = -player%
                    CIRCLE (i%, j%), 28, 13
                    PAINT (i%, j%), , 13
                    GOTO Showmoves

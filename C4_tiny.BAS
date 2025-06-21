@@ -1,6 +1,6 @@
 DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTEGER
-colorfor(-1) = 10
-colorfor(1) = 12
+colorfor(-1) = 12
+colorfor(1) = 10
 player% = 1
   row(1) = 190
     row(2) = 255

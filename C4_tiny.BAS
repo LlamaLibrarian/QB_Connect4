@@ -1,6 +1,6 @@
 DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTEGER
-colorfor(-1) = 12
-colorfor(1) = 10
+colorfor(-1) = 4
+colorfor(1) = 7
 player% = 1
   row(1) = 190
     row(2) = 255
@@ -25,9 +25,10 @@ Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
   CASE 1 TO 7: IF column(j%) < 0 THEN GOTO Getinput
-               player% = -player%
                moves$ = moves$ + CHR$(j% + 48)
-               CIRCLE (row(j%), column(j%)), 28
+               player% = -player%
+               CIRCLE (row(j%), column(j%)), 28, 13
+               PAINT (row(j%), column(j%)), , 13
                column(j%) = column(j%) - 65
                GOTO Showmoves
   CASE IS >= 1000: CLS

@@ -11,7 +11,7 @@ Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
   CASE 1 TO 7: i% = entry% * 65 + 125
-               IF POINT(i%, 88) THEN GOTO Getinput
+               IF POINT(i%, 32) THEN GOTO Getinput
                FOR j% = 357 TO 32 STEP -65
                  IF POINT(i%, j%) = 0 THEN
                    moves$ = moves$ + CHR$(entry% + 48)

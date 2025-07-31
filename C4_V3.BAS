@@ -10,13 +10,13 @@ Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
   CASE 190 TO 580: IF POINT(entry%, 32) THEN GOTO Getinput
-               FOR j% = 357 TO 32 STEP -65
-                 IF POINT(entry%, j%) = 0 THEN
-                   player% = -player%
-                   CIRCLE (entry%, j% + 28), 28
-                   GOTO Showmoves
-                 END IF
-               NEXT
+                   FOR j% = 357 TO 32 STEP -65
+                     IF POINT(entry%, j%) = 0 THEN
+                       player% = -player%
+                       CIRCLE (entry%, j% + 28), 28
+                       GOTO Showmoves
+                     END IF
+                   NEXT
   CASE IS >= 1000: CLS
                    GOTO Showmoves
   CASE IS < 0: END

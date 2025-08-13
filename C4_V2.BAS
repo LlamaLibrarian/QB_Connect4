@@ -3,10 +3,10 @@ colorfor(-1) = 4
 colorfor(1) = 7
 player% = 1
 SCREEN 12
-Newgame: moves$ = ""
+Newgame: moves$ = "Moves= "
 Showmoves: LOCATE 28, 24
 COLOR colorfor(player%)
-PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", "Moves= "; moves$;
+PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$
 Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
@@ -25,3 +25,4 @@ SELECT CASE entry%
   CASE IS < 0: END
 END SELECT
 GOTO Getinput
+

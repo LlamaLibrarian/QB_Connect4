@@ -6,7 +6,7 @@ SCREEN 12
 Newgame: moves$ = "Moves= "
 Showmoves: LOCATE 28, 24
 COLOR colorfor(player%)
-PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$
+PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
 Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
@@ -25,4 +25,5 @@ SELECT CASE entry%
   CASE IS < 0: END
 END SELECT
 GOTO Getinput
+
 

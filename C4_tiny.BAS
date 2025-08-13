@@ -10,7 +10,7 @@ player% = 1
             row(6) = 515
               row(7) = 580
 SCREEN 12
-Newgame: moves$ = ""
+Newgame: moves$ = "Moves= "
   column(1) = 385
     column(2) = 385
       column(3) = 385
@@ -20,7 +20,7 @@ Newgame: moves$ = ""
               column(7) = 385
 Showmoves: LOCATE 28, 24
 COLOR colorfor(player%)
-PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", "Moves= "; moves$;
+PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
@@ -35,3 +35,4 @@ SELECT CASE j%
   CASE IS < 0: END
 END SELECT
 GOTO Getinput
+

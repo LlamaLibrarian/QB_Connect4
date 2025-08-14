@@ -1,5 +1,5 @@
 # QB_Connect4
 
-A board for the Connect4 game, runs in QBASIC.
+A Connect4 game board, runs in QBASIC.
     
 Filename= C4_tiny.BAS

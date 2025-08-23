@@ -1,6 +1,6 @@
 DIM colorfor(-1 TO 1) AS INTEGER
 colorfor(-1) = 4
-colorfor(1) = 7
+colorfor(1) = 2
 player% = 1
 SCREEN 12
 Newgame: moves$ = "Moves= "
@@ -25,5 +25,6 @@ SELECT CASE entry%
   CASE IS < 0: END
 END SELECT
 GOTO Getinput
+
 
 

@@ -1,6 +1,6 @@
 DIM colorfor(-1 TO 1) AS INTEGER
 colorfor(-1) = 4
-colorfor(1) = 7
+colorfor(1) = 2
 player% = 1
 SCREEN 12
 Showmoves: LOCATE 28, 24
@@ -22,4 +22,5 @@ SELECT CASE entry%
             NEXT
 END SELECT
 GOTO Getinput
+
 

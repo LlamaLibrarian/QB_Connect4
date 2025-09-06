@@ -2,13 +2,13 @@ DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTE
 colorfor(-1) = 4
 colorfor(1) = 2
 player% = 1
-  row(1) = 190
-    row(2) = 255
-      row(3) = 320
-        row(4) = 385
-          row(5) = 450
-            row(6) = 515
-              row(7) = 580
+  row(1) = 205
+    row(2) = 270
+      row(3) = 335
+        row(4) = 400
+          row(5) = 465
+            row(6) = 530
+              row(7) = 595
 SCREEN 12
 Newgame: moves$ = "Moves= "
   column(1) = 385
@@ -18,7 +18,7 @@ Newgame: moves$ = "Moves= "
           column(5) = 385
             column(6) = 385
               column(7) = 385
-Showmoves: LOCATE 28, 24
+Showmoves: LOCATE 28, 26
 COLOR colorfor(player%)
 PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
 Getinput: LOCATE 1, 1
@@ -35,4 +35,5 @@ SELECT CASE j%
   CASE IS < 0: END
 END SELECT
 GOTO Getinput
+
 

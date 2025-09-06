@@ -3,9 +3,9 @@ colorfor(-1) = 4
 colorfor(1) = 2
 player% = 1
 SCREEN 12
-Showmoves: LOCATE 28, 24
+Showmoves: LOCATE 28, 26
 COLOR colorfor(player%)
-PRINT "190     255     320     385     450     515     580"
+PRINT "205     270     335     400     465     530     595"
 Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
@@ -22,5 +22,3 @@ SELECT CASE entry%
             NEXT
 END SELECT
 GOTO Getinput
-
-

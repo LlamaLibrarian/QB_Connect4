@@ -22,9 +22,8 @@ SELECT CASE entry%
                    GOTO ShowMoves
                  END IF
                NEXT
-  CASE IS >= 1000: i% = entry% MOD 13 + 1
-                   colorfor(-1) = i%
-                   colorfor(1) = i% + 2
+  CASE IS >= 1000: colorfor(-1) = entry% MOD 13 + 1
+                   colorfor(1) = colorfor(-1) + 2
                    moves$ = "Moves= "
                    CLS
                    GOTO ShowMoves

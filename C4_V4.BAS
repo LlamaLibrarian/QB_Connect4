@@ -22,11 +22,12 @@ SELECT CASE entry%
                    GOTO ShowMoves
                  END IF
                NEXT
-  CASE IS >= 1000: colorfor(-1) = entry% MOD 13 + 1
+  CASE IS >= 1000: CLS
+                   colorfor(-1) = entry% MOD 13 + 1
                    colorfor(1) = colorfor(-1) + 2
-                   moves$ = "Moves= "
-                   CLS
+                   moves$ = "Moves= "                
                    GOTO ShowMoves
   CASE IS < 0: END
 END SELECT
 GOTO GetInput
+

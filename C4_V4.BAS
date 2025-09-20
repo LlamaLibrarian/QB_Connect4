@@ -1,6 +1,6 @@
 DIM colorfor(-1 TO 1) AS INTEGER
 player% = 1
-entry% = 1012
+entry% = 1010
 SCREEN 12
 GOTO FirstRun
 ShowMoves:
@@ -30,4 +30,5 @@ SELECT CASE entry%
   CASE IS < 0: END
 END SELECT
 GOTO GetInput
+
 

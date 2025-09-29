@@ -4,7 +4,7 @@ colorfor(1) = 2
 player% = 1
 SCREEN 12
 Newgame: moves$ = "Moves= "
-Showmoves: LOCATE 28, 26
+Showmove: LOCATE 28, 26
 COLOR colorfor(player%)
 PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
 Getinput: LOCATE 1, 1
@@ -17,7 +17,7 @@ SELECT CASE entry%
                    moves$ = moves$ + CHR$(entry% + 48)
                    player% = -player%
                    CIRCLE (i%, j% + 28), 28
-                   GOTO Showmoves
+                   GOTO Showmove
                  END IF
                NEXT
   CASE IS >= 1000: CLS

@@ -10,7 +10,6 @@ PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
 GetInput:
 LOCATE 1, 1
 INPUT entry%
-FirstRun:
 SELECT CASE entry%
   CASE 1 TO 7: i% = entry% * 65 + 140
                IF POINT(i%, 32) THEN GOTO GetInput
@@ -23,6 +22,7 @@ SELECT CASE entry%
                  END IF
                NEXT
   CASE IS >= 1000: CLS
+                   FirstRun:
                    colorfor(-1) = entry% MOD 13 + 1
                    colorfor(1) = colorfor(-1) + 2
                    moves$ = "Moves= "                
@@ -30,5 +30,3 @@ SELECT CASE entry%
   CASE IS < 0: END
 END SELECT
 GOTO GetInput
-
-

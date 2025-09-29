@@ -3,7 +3,7 @@ player% = 1
 entry% = 1005
 SCREEN 12
 GOTO FirstRun
-ShowMoves: LOCATE 28, 26
+ShowMove: LOCATE 28, 26
 COLOR colorfor(player%)
 PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
 GetInput: LOCATE 1, 1
@@ -16,14 +16,15 @@ SELECT CASE entry%
                    moves$ = moves$ + CHR$(entry% + 48)
                    player% = -player%
                    CIRCLE (i%, j% + 28), 28
-                   GOTO ShowMoves
+                   GOTO ShowMove
                  END IF
                NEXT
   CASE IS >= 1000: CLS
                    FirstRun: colorfor(-1) = entry% MOD 13 + 1
                    colorfor(1) = colorfor(-1) + 2
                    moves$ = "Moves= "                
-                   GOTO ShowMoves
+                   GOTO ShowMove
   CASE IS < 0: END
 END SELECT
 GOTO GetInput
+

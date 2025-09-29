@@ -22,4 +22,3 @@ SELECT CASE entry%
             NEXT
 END SELECT
 GOTO Getinput
-

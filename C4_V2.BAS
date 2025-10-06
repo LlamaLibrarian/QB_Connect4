@@ -4,9 +4,9 @@ colorfor(1) = 2
 player% = 1
 SCREEN 12
 Newgame: moves$ = "Moves= "
-Showmove: LOCATE 28, 26
+Showmove: LOCATE 28, 27
 COLOR colorfor(player%)
-PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
+PRINT "1       2       3       4       5       6       7", moves$;
 Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%

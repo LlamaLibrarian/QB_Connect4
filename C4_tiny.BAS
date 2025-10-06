@@ -18,9 +18,9 @@ Newgame: moves$ = "Moves= "
           column(5) = 385
             column(6) = 385
               column(7) = 385
-Showmove: LOCATE 28, 26
+Showmove: LOCATE 28, 27
 COLOR colorfor(player%)
-PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
+PRINT "1       2       3       4       5       6       7", moves$;
 Getinput: LOCATE 1, 1
 INPUT j%
 SELECT CASE j%
@@ -35,3 +35,4 @@ SELECT CASE j%
   CASE IS < 0: END
 END SELECT
 GOTO Getinput
+

@@ -27,4 +27,3 @@ SELECT CASE entry%
   CASE IS < 0: END
 END SELECT
 GOTO GetInput
-

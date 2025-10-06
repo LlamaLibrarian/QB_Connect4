@@ -3,9 +3,9 @@ player% = 1
 entry% = 1005
 SCREEN 12
 GOTO FirstRun
-ShowMove: LOCATE 28, 26
+ShowMove: LOCATE 28, 27
 COLOR colorfor(player%)
-PRINT "\1\     \2\     \3\     \4\     \5\     \6\     \7\", moves$;
+PRINT "1       2       3       4       5       6       7", moves$;
 GetInput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
@@ -27,3 +27,4 @@ SELECT CASE entry%
   CASE IS < 0: END
 END SELECT
 GOTO GetInput
+

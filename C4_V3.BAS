@@ -3,7 +3,7 @@ colorfor(-1) = 4
 colorfor(1) = 2
 player% = 1
 SCREEN 12
-Showmove: LOCATE 28, 26
+Showmove: LOCATE 28, 25
 COLOR colorfor(player%)
 PRINT "205     270     335     400     465     530     595"
 Getinput: LOCATE 1, 1

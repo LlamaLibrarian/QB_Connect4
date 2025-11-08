@@ -22,3 +22,5 @@ SELECT CASE entry%
             NEXT
 END SELECT
 GOTO Getinput
+
+' This program works correctly only when user enters the correct shown column number 205, 270, 335, 400, 465, 530 or 595. 

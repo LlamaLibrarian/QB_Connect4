@@ -1,6 +1,6 @@
 # QB_Connect4
 
-A Connect4 game board, runs in QBASIC.
+A minimalist Connect4 game board, runs in QBASIC.
     
 - player input number >= 1000 for a new game;
     input negative number to exit game;

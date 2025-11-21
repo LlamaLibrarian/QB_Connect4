@@ -2,22 +2,22 @@ DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTE
 colorfor(-1) = 4
 colorfor(1) = 2
 player% = 1
- row(1) = 205
-  row(2) = 270
-   row(3) = 335
-    row(4) = 400
-     row(5) = 465
-      row(6) = 530
-       row(7) = 595
+row(1) = 205
+row(2) = 270
+row(3) = 335
+row(4) = 400
+row(5) = 465
+row(6) = 530
+row(7) = 595
 SCREEN 12
 NewGame: moves$ = "Moves= "
- column(1) = 385
-  column(2) = 385
-   column(3) = 385
-    column(4) = 385
-     column(5) = 385
-      column(6) = 385
-       column(7) = 385
+column(1) = 385
+column(2) = 385
+column(3) = 385
+column(4) = 385
+column(5) = 385
+column(6) = 385
+column(7) = 385
 ShowMove: LOCATE 28, 27
 COLOR colorfor(player%)
 PRINT "1       2       3       4       5       6       7", moves$;

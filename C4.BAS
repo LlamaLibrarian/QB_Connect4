@@ -1,7 +1,7 @@
-DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 1) AS INTEGER
-colorfor(-1) = 4
-colorfor(1) = 2
-player% = 1
+DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 0) AS INTEGER
+colorfor(-1) = 2
+colorfor(0) = 4
+player% = 0
 row(1) = 205
 row(2) = 270
 row(3) = 335
@@ -26,7 +26,7 @@ INPUT j%
 SELECT CASE j%
  CASE 1 TO 7: IF column(j%) < 0 THEN GOTO GetInput
               moves$ = moves$ + CHR$(j% + 48)
-              player% = -player%
+              player% = NOT player%
               CIRCLE (row(j%), column(j%)), 28
               column(j%) = column(j%) - 65
               GOTO ShowMove
@@ -35,3 +35,4 @@ SELECT CASE j%
  CASE IS < 0: END
 END SELECT
 GOTO GetInput
+

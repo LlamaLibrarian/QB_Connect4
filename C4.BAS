@@ -18,7 +18,7 @@ column(4) = 385
 column(5) = 385
 column(6) = 385
 column(7) = 385
-ShowMove: LOCATE 28, 27
+ShowStatus: LOCATE 28, 27
 COLOR colorfor(player%)
 PRINT "1       2       3       4       5       6       7", moves$;
 GetInput: LOCATE 1, 1
@@ -29,10 +29,11 @@ SELECT CASE j%
               player% = NOT player%
               CIRCLE (row(j%), column(j%)), 28
               column(j%) = column(j%) - 65
-              GOTO ShowMove
+              GOTO ShowStatus
  CASE IS >= 1000: CLS
                   GOTO NewGame
  CASE IS < 0: END
 END SELECT
 GOTO GetInput
+
 

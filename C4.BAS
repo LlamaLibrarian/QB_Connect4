@@ -21,8 +21,10 @@ column(7) = 385
 ShowStatus: LOCATE 28, 27
 COLOR colorfor(player%)
 PRINT "1       2       3       4       5       6       7", moves$;
-GetInput: LOCATE 1, 1
-INPUT j%
+GetInput: DO
+           LOCATE 1, 1
+           INPUT j%
+          LOOP UNTIL j%
 SELECT CASE j%
  CASE 1 TO 7: IF column(j%) < 0 THEN GOTO GetInput
               moves$ = moves$ + CHR$(j% + 48)
@@ -35,5 +37,3 @@ SELECT CASE j%
  CASE IS < 0: END
 END SELECT
 GOTO GetInput
-
-

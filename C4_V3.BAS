@@ -19,6 +19,5 @@ SELECT CASE entry%
                                          NEXT
  CASE IS >= 1000: CLS
                   GOTO Showmove
- CASE IS < 0: END
 END SELECT
-GOTO Getinput
+IF entry% >= 0 THEN GOTO GetInput

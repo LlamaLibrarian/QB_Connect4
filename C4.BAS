@@ -32,6 +32,5 @@ SELECT CASE j%
               GOTO ShowStatus
  CASE IS >= 1000: CLS
                   GOTO NewGame
- CASE IS < 0: END
 END SELECT
-GOTO GetInput
+IF j% >= 0 THEN GOTO GetInput

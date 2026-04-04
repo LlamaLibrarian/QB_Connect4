@@ -23,14 +23,16 @@ COLOR colorfor(player%)
 PRINT "1       2       3       4       5       6       7", moves$;
 GetInput: LOCATE 1, 1
 INPUT j%
-SELECT CASE j%
- CASE 1 TO 7: IF column(j%) < 0 THEN GOTO GetInput
-              moves$ = moves$ + CHR$(j% + 48)
-              player% = NOT player%
-              CIRCLE (row(j%), column(j%)), 28
-              column(j%) = column(j%) - 65
-              GOTO ShowStatus
- CASE IS >= 1000: CLS
-                  GOTO NewGame
-END SELECT
+IF (j% >= 1) AND (j% <= 7) THEN
+ IF column(j%) < 0 THEN GOTO GetInput
+ moves$ = moves$ + CHR$(j% + 48)
+ player% = NOT player%
+ CIRCLE (row(j%), column(j%)), 28
+ column(j%) = column(j%) - 65
+ GOTO ShowStatus
+END IF
+IF j% >= 1000 THEN
+ CLS
+ GOTO NewGame
+END IF
 IF j% >= 0 THEN GOTO GetInput

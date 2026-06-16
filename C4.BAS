@@ -33,4 +33,3 @@ IF j% >= 1000 THEN
  GOTO NewGame
 END IF
 IF j% >= 0 THEN GOTO GetInput
-

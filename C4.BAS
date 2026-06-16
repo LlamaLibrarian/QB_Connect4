@@ -33,3 +33,5 @@ IF j% >= 1000 THEN
  GOTO NewGame
 END IF
 IF j% >= 0 THEN GOTO GetInput
+
+REM This runs the fastest in compiled .EXE form.

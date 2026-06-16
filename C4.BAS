@@ -34,4 +34,4 @@ IF j% >= 1000 THEN
 END IF
 IF j% >= 0 THEN GOTO GetInput
 
-REM This runs the fastest in compiled .EXE form.
+REM This version runs in lesser cpu cycle in compiled .EXE form.

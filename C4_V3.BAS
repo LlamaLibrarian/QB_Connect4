@@ -17,4 +17,3 @@ SELECT CASE entry%
                   GOTO Showmove
 END SELECT
 IF entry% >= 0 THEN GOTO Getinput
-

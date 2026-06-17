@@ -18,4 +18,4 @@ SELECT CASE entry%
 END SELECT
 IF entry% >= 0 THEN GOTO Getinput
 
-REM This is experimental.
+REM This is experimental.  Not the efficient program that is created.

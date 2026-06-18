@@ -34,4 +34,4 @@ IF j% >= 1000 THEN
 END IF
 IF j% >= 0 THEN GOTO GetInput
 
-REM Compile this to a .EXE form, this version runs with lesser cpu cycles.
+REM Compile this to a .EXE form, it runs with lesser cpu cycles.

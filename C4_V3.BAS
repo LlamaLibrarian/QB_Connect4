@@ -6,6 +6,8 @@ PRINT "205     270     335     400     465     530     595"
 Getinput: LOCATE 1, 1
 INPUT entry%
 SELECT CASE entry%
+ CASE IS >= 1000: CLS
+                  GOTO Showmove
  CASE 400, 335, 465, 270, 530, 205, 595: IF POINT(entry%, 32) THEN GOTO Getinput
                                          FOR j% = 357 TO 32 STEP -65
                                           IF POINT(entry%, j%) = 0 THEN
@@ -13,8 +15,6 @@ SELECT CASE entry%
                                            GOTO Showmove
                                           END IF
                                          NEXT
- CASE IS >= 1000: CLS
-                  GOTO Showmove
 END SELECT
 IF entry% >= 0 THEN GOTO Getinput
 

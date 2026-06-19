@@ -18,4 +18,4 @@ SELECT CASE entry%
 END SELECT
 IF entry% >= 0 THEN GOTO Getinput
 
-REM This is experimental.
+REM Lesson learned:  Algorithm correctness and workflow speed take priority over .exe compression.

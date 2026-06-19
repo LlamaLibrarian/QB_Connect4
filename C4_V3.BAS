@@ -18,4 +18,4 @@ SELECT CASE entry%
 END SELECT
 IF entry% >= 0 THEN GOTO Getinput
 
-REM Lesson learned:  Algorithm correctness and workflow speed take priority over .exe compression.
+REM Lesson learned: Prioritize algorithm correctness and workflow efficiency over .exe compression.

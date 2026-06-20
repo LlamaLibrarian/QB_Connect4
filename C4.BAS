@@ -35,4 +35,4 @@ IF j% >= 1000 THEN
 END IF
 IF j% >= 0 THEN GOTO GetInput
 
-REM This version is for compile to a .EXE form.
+REM This is for compile to a .EXE file.

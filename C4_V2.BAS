@@ -37,4 +37,4 @@ IF j% >= 1000 THEN
 END IF
 IF j% >= 0 THEN GOTO GetInput
 
-REM This code is for running in qbasic.exe interpreter.
+REM This is for running in qbasic.exe interpreter.

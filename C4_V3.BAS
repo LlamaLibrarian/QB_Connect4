@@ -1,5 +1,5 @@
 SCREEN 12
-Showmove: LOCATE 28, 25
+Showmove: LOCATE 28, 26
 IF playcolor% = 2 THEN playcolor% = 4 ELSE playcolor% = 2
 COLOR playcolor%
 PRINT "205     270     335     400     465     530     595"

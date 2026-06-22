@@ -2,7 +2,7 @@
 
 A minimalist Connect4 game board, runs in QBASIC.
     
-- player input number >= 1000 for a new game;
+- player input number >= 1000, or >= 10000, and <= 32767 for a new game;
     input negative number to exit game;
     input shown column number to place the token.
 

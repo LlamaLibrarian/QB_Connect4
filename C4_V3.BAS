@@ -1,5 +1,3 @@
-REM This is experimental.
-
 SCREEN 12
 Showmove: LOCATE 28, 26
 IF playcolor% = 2 THEN playcolor% = 4 ELSE playcolor% = 2
@@ -19,3 +17,6 @@ SELECT CASE entry%
                    GOTO Showmove
 END SELECT
 IF entry% >= 0 THEN GOTO Getinput
+
+
+REM This is experimental.

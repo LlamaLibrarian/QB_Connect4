@@ -1,3 +1,5 @@
+REM This is for running in qbasic.exe interpreter.
+
 DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 0) AS INTEGER
 colorfor(-1) = 2
 colorfor(0) = 4
@@ -36,5 +38,3 @@ IF j% >= 1000 THEN
  GOTO NewGame
 END IF
 IF j% >= 0 THEN GOTO GetInput
-
-REM This is for running in qbasic.exe interpreter.

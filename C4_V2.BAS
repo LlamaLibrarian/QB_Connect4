@@ -1,11 +1,9 @@
-REM This is for running in qbasic.exe interpreter.
-
 DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER, colorfor(-1 TO 0) AS INTEGER
 colorfor(-1) = 2
 colorfor(0) = 4
 player% = 0
 row(1) = 205
-row(2) = 270
+row(2) = 270      ' This is for running in qbasic.exe interpreter.
 row(3) = 335
 row(4) = 400
 row(5) = 465

@@ -1,11 +1,9 @@
-REM This is for compile to a .EXE file.
-
 DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER
 player% = 0
 row(1) = 205
 row(2) = 270
 row(3) = 335
-row(4) = 400
+row(4) = 400 : REM This is for compile to a .EXE file.
 row(5) = 465
 row(6) = 530
 row(7) = 595

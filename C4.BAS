@@ -1,3 +1,5 @@
+REM This is for compile to a .EXE file.
+
 DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER
 player% = 0
 row(1) = 205
@@ -34,5 +36,3 @@ IF j% >= 1000 THEN
  GOTO NewGame
 END IF
 IF j% >= 0 THEN GOTO GetInput
-
-REM This is for compile to a .EXE file.

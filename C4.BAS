@@ -1,5 +1,4 @@
 DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER
-player% = 0
 row(1) = 205
 row(2) = 270
 row(3) = 335
@@ -17,14 +16,14 @@ column(5) = 385
 column(6) = 385
 column(7) = 385
 ShowStatus: LOCATE 28, 27
-IF player% THEN COLOR 2 ELSE COLOR 4
+IF player% = 2 THEN player% = 4 ELSE player% = 2
+COLOR player%
 PRINT "1       2       3       4       5       6       7", moves$;
 GetInput: LOCATE 1, 1
 INPUT j%
 IF (j% >= 1) AND (j% <= 7) THEN
  IF column(j%) < 0 THEN GOTO GetInput
  moves$ = moves$ + CHR$(j% + 48)
- player% = NOT player%
  CIRCLE (row(j%), column(j%)), 28
  column(j%) = column(j%) - 65
  GOTO ShowStatus

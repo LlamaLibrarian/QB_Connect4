@@ -16,8 +16,8 @@ column(5) = 385
 column(6) = 385
 column(7) = 385
 ShowStatus: LOCATE 28, 27
-IF player% = 2 THEN player% = 4 ELSE player% = 2
-COLOR player%
+IF disccolor% = 2 THEN disccolor% = 4 ELSE disccolor% = 2
+COLOR disccolor%
 PRINT "1       2       3       4       5       6       7", moves$;
 GetInput: LOCATE 1, 1
 INPUT j%
